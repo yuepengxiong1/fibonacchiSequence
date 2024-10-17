@@ -1,18 +1,37 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This program generates the fibonacchi sequence up until the users desired iteration. This stops at 92 max interations because of limitations of long values
+Use this program by this command:
+```
+$ java -jar --enable-preview fibonacchiSequence.jar [enter an integer]
+```
 
-## Folder Structure
+Example of the terminal when passed in the right arguments:
+```
+$ java -jar --enable-preview fibonacchiSequence.jar 5
+Computing Fibonacci sequence up to: 5 iterations.
+F0: 0
+F1: 1
+F2: 1
+F3: 2
+F4: 3
+F5: 5
+Fibonacci Sequence of 5 iterations is: 5
+```
+Example of passing no arguments:
+```
+$ java -jar --enable-preview fibonacchiSequence.jar 
+You must only pass in one integer number.
+```
 
-The workspace contains two folders by default, where:
+Example of passing more than 1 arguments:
+```
+$ java -jar --enable-preview fibonacchiSequence.jar 0 0 
+You must only pass in one integer number.
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Example of passing string instead of an integer:
+```
+$ java -jar --enable-preview fibonacchiSequence.jar asdf
+The passed argument is not a number.
+```
