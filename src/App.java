@@ -1,5 +1,12 @@
-public class App {
+/*
+ * Yuepeng Xiong 
+ * 10/17/24
+ * Generates the fibonacchi sequence up until the specified users desired number. Stops at 92.
+ */
 
+
+public class App {
+    //checks if the value passed in is a number.
     public static boolean isNumeric(String passedValue) {
         try {
             Integer.parseInt(passedValue);
@@ -28,14 +35,13 @@ public class App {
             } else if (maxIterations == 1) {
                 System.out.println("Fibonacci Sequence of 1 iterations is: 1");
             } else {
-
+                // Only way around because the Fibonacci sequence only works after 2
+                System.out.println("F0: 0");
+                System.out.println("F1: 1");
+                
                 // Start at 1 because it makes it easier to understand. F(n) = f(n-1) + f(n-2); parentheses is subscript. This is only valid when i > 2
                 for (int i = 2; i <= maxIterations; i++) {
-                    // Only way around because the Fibonacci sequence only works after 2
-                    if (i == 2) {
-                        System.out.println("F0: 0");
-                        System.out.println("F1: 1");
-                    } else if (i > 92) {
+                    if (i > 92) {
                         System.out.println("The next value of the sequence will OVERFLOW the long value. Ending Loop.");
                         break;
                     }
